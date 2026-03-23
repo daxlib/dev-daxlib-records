@@ -71,7 +71,7 @@ This is why we must use functions with a fixed number of parameters (up to 20) i
 
 ## Contributing
 
-Contributions are welcome! Please open issues or submit pull requests on https://github.com/sql-bi/dev-daxlib-records
+Contributions are welcome! Please open issues or submit pull requests on https://github.com/daxlib/dev-daxlib-records
 
 ## License
 
