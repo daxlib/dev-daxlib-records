@@ -1,0 +1,69 @@
+/// Create an encoded parameter string with 14 argument/value pairs
+/// @param {string} parameterName1 - The name of the first parameter
+/// @param {string} parameterValue1 - The value of the first parameter
+/// @param {string} parameterName2 - The name of the second parameter
+/// @param {string} parameterValue2 - The value of the second parameter
+/// @param {string} parameterName3 - The name of the third parameter
+/// @param {string} parameterValue3 - The value of the third parameter
+/// @param {string} parameterName4 - The name of the fourth parameter
+/// @param {string} parameterValue4 - The value of the fourth parameter
+/// @param {string} parameterName5 - The name of the fifth parameter
+/// @param {string} parameterValue5 - The value of the fifth parameter
+/// @param {string} parameterName6 - The name of the sixth parameter
+/// @param {string} parameterValue6 - The value of the sixth parameter
+/// @param {string} parameterName7 - The name of the seventh parameter
+/// @param {string} parameterValue7 - The value of the seventh parameter
+/// @param {string} parameterName8 - The name of the eighth parameter
+/// @param {string} parameterValue8 - The value of the eighth parameter
+/// @param {string} parameterName9 - The name of the ninth parameter
+/// @param {string} parameterValue9 - The value of the ninth parameter
+/// @param {string} parameterName10 - The name of the tenth parameter
+/// @param {string} parameterValue10 - The value of the tenth parameter
+/// @param {string} parameterName11 - The name of the eleventh parameter
+/// @param {string} parameterValue11 - The value of the eleventh parameter
+/// @param {string} parameterName12 - The name of the twelfth parameter
+/// @param {string} parameterValue12 - The value of the twelfth parameter
+/// @param {string} parameterName13 - The name of the thirteenth parameter
+/// @param {string} parameterValue13 - The value of the thirteenth parameter
+/// @param {string} parameterName14 - The name of the fourteenth parameter
+/// @param {string} parameterValue14 - The value of the fourteenth parameter
+/// @return String with the encoded parameter string
+function 'DaxLib.Records.NewRecordValue14' = ```
+    (
+        parameterName1 : STRING VAL,
+        parameterValue1 : STRING VAL,
+        parameterName2 : STRING VAL,
+        parameterValue2 : STRING VAL,
+        parameterName3 : STRING VAL,
+        parameterValue3 : STRING VAL,
+        parameterName4 : STRING VAL,
+        parameterValue4 : STRING VAL,
+        parameterName5 : STRING VAL,
+        parameterValue5 : STRING VAL,
+        parameterName6 : STRING VAL,
+        parameterValue6 : STRING VAL,
+        parameterName7 : STRING VAL,
+        parameterValue7 : STRING VAL,
+        parameterName8 : STRING VAL,
+        parameterValue8 : STRING VAL,
+        parameterName9 : STRING VAL,
+        parameterValue9 : STRING VAL,
+        parameterName10 : STRING VAL,
+        parameterValue10 : STRING VAL,
+        parameterName11 : STRING VAL,
+        parameterValue11 : STRING VAL,
+        parameterName12 : STRING VAL,
+        parameterValue12 : STRING VAL,
+        parameterName13 : STRING VAL,
+        parameterValue13 : STRING VAL,
+        parameterName14 : STRING VAL,
+        parameterValue14 : STRING VAL
+    ) =>
+    DaxLib.Records.AddRecordValue (
+        DaxLib.Records.NewRecordValue13 (
+            parameterName1, parameterValue1, parameterName2, parameterValue2, parameterName3, parameterValue3, parameterName4, parameterValue4, parameterName5, parameterValue5, parameterName6, parameterValue6, parameterName7, parameterValue7, parameterName8, parameterValue8, parameterName9, parameterValue9, parameterName10, parameterValue10, parameterName11, parameterValue11, parameterName12, parameterValue12, parameterName13, parameterValue13
+        ), parameterName14, parameterValue14
+    )
+    ```
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__

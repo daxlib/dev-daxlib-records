@@ -1,0 +1,37 @@
+/// Create an encoded parameter string with 6 argument/value pairs
+/// @param {string} parameterName1 - The name of the first parameter
+/// @param {string} parameterValue1 - The value of the first parameter
+/// @param {string} parameterName2 - The name of the second parameter
+/// @param {string} parameterValue2 - The value of the second parameter
+/// @param {string} parameterName3 - The name of the third parameter
+/// @param {string} parameterValue3 - The value of the third parameter
+/// @param {string} parameterName4 - The name of the fourth parameter
+/// @param {string} parameterValue4 - The value of the fourth parameter
+/// @param {string} parameterName5 - The name of the fifth parameter
+/// @param {string} parameterValue5 - The value of the fifth parameter
+/// @param {string} parameterName6 - The name of the sixth parameter
+/// @param {string} parameterValue6 - The value of the sixth parameter
+/// @return String with the values of the parameters
+function 'DaxLib.Records.NewRecordValue6' = ```
+    (
+        parameterName1 : STRING VAL,
+        parameterValue1 : STRING VAL,
+        parameterName2 : STRING VAL,
+        parameterValue2 : STRING VAL,
+        parameterName3 : STRING VAL,
+        parameterValue3 : STRING VAL,
+        parameterName4 : STRING VAL,
+        parameterValue4 : STRING VAL,
+        parameterName5 : STRING VAL,
+        parameterValue5 : STRING VAL,
+        parameterName6 : STRING VAL,
+        parameterValue6 : STRING VAL
+    ) =>
+    DaxLib.Records.AddRecordValue (
+        DaxLib.Records.NewRecordValue5 (
+            parameterName1, parameterValue1, parameterName2, parameterValue2, parameterName3, parameterValue3, parameterName4, parameterValue4, parameterName5, parameterValue5
+        ), parameterName6, parameterValue6
+    )
+    ```
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__

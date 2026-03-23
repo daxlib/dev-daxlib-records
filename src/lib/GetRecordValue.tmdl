@@ -1,0 +1,21 @@
+/// Function to retrieve a value given a parameter name from an encoded string
+/// If the parameter is not found, it raises an error. 
+/// Use GetRecordValueDefault if you want to return a default value instead of raising an error.
+/// @param {string} encodedString - The encoded parameter string
+/// @param {string} parameterName - The name of the parameter
+/// @return String with the value of the parameter
+function 'DaxLib.Records.GetRecordValue' = ```
+    (
+        encodedString : STRING VAL,
+        parameterName : STRING VAL
+    ) =>
+    VAR ErrorDefaultValue = "__*_ERROR_VALUE_*__"
+    VAR Result = DaxLib.Records.GetRecordValueDefault(encodedString, parameterName, ErrorDefaultValue)
+    RETURN IF ( 
+        Result = ErrorDefaultValue,
+        ERROR("Parameter not found by GetRecordValue"),
+        Result
+    )
+    ```
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__

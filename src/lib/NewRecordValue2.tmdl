@@ -1,0 +1,21 @@
+/// Create an encoded parameter string with two argument/value pairs
+/// @param {string} parameterName1 - The name of the first parameter
+/// @param {string} parameterValue1 - The value of the first parameter
+/// @param {string} parameterName2 - The name of the second parameter
+/// @param {string} parameterValue2 - The value of the second parameter
+/// @return String with the values of the parameters
+function 'DaxLib.Records.NewRecordValue2' = ```
+    (
+        parameterName1 : STRING VAL,
+        parameterValue1 : STRING VAL,
+        parameterName2 : STRING VAL,
+        parameterValue2 : STRING VAL
+    ) =>
+    DaxLib.Records.AddRecordValue (
+        DaxLib.Records.NewRecordValue (
+            parameterName1, parameterValue1
+        ), parameterName2, parameterValue2
+    )
+    ```
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__

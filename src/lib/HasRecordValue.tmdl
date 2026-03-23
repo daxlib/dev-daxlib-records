@@ -1,0 +1,18 @@
+/// Function to retrieve a value given a parameter name from an encoded string
+/// @param {string} encodedString - The encoded parameter string
+/// @param {string} parameterName - The name of the parameter
+/// @return Boolean indicating if the parameter exists
+function 'DaxLib.Records.HasRecordValue' = ```
+    (
+        encodedString : STRING VAL,
+        parameterName : STRING VAL
+    ) =>
+    VAR NamePosition = DaxLib.Records.Internals.FindNamePosition(encodedString, parameterName)
+
+    // Returns whether the parameter exists
+    VAR Result = (NamePosition > 0)
+
+    RETURN Result
+    ```
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__

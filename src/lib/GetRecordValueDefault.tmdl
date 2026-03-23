@@ -1,0 +1,37 @@
+/// Function to retrieve a value given a parameter name from an encoded string
+/// @param {string} encodedString - The encoded parameter string
+/// @param {string} parameterName - The name of the parameter
+/// @param {string} defaultValue - The default value to return if the parameter is not found
+/// @return String with the value of the parameter
+function 'DaxLib.Records.GetRecordValueDefault' = ```
+    (
+        encodedString : STRING VAL,
+        parameterName : STRING VAL,
+        defaultValue : STRING VAL
+    ) =>
+    VAR AssignmentSeparator = DaxLib.Records.Internals.AssignmentSeparator()
+    VAR ItemSeparator = DaxLib.Records.Internals.ItemSeparator()
+
+    // Normalize string to ensure trailing item separator
+    VAR NormalizedString = DaxLib.Records.Internals.GetNormalizedString(encodedString)
+
+    // Search for the parameter name followed by assignment separator
+    VAR SearchPattern = parameterName & AssignmentSeparator
+    VAR NamePosition = FIND(SearchPattern, NormalizedString, 1, 0)
+
+    // Extract the value if found
+    VAR Result = 
+        IF(
+            NamePosition = 0,
+            defaultValue,
+            VAR ValueStart = NamePosition + LEN(SearchPattern)
+            VAR RemainingString = MID(NormalizedString, ValueStart, LEN(NormalizedString))
+            VAR ValueEnd = FIND(ItemSeparator, RemainingString, 1, 0)
+            VAR ExtractedValue = LEFT(RemainingString, ValueEnd - 1)
+            RETURN ExtractedValue
+        )
+
+    RETURN Result
+    ```
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__

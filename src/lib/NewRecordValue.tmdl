@@ -1,0 +1,13 @@
+/// Create an encoded parameter string with one argument/value pair
+/// @param {string} parameterName - The name of the parameter
+/// @param {string} parameterValue - The value of the parameter
+/// @return String with the value of the parameter
+function 'DaxLib.Records.NewRecordValue' = ```
+    (
+        parameterName : STRING VAL,
+        parameterValue : STRING VAL
+    ) =>
+    DaxLib.Records.AddRecordValue ( "", parameterName, parameterValue )
+    ```
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__

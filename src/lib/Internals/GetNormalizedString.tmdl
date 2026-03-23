@@ -1,0 +1,22 @@
+/// Get the normalized string by ensuring it ends with the item separator, which simplifies parsing logic in other functions
+/// @param {string} encodedString - The encoded parameter string
+/// @return String normalized encoded string
+function 'DaxLib.Records.Internals.GetNormalizedString' = ```
+    (
+        encodedString : STRING VAL
+    ) =>
+    VAR AssignmentSeparator = DaxLib.Records.Internals.AssignmentSeparator()
+    VAR ItemSeparator = DaxLib.Records.Internals.ItemSeparator()
+
+    // Normalize string to ensure trailing item separator
+    VAR NormalizedString = 
+        IF(
+            RIGHT(encodedString, LEN(ItemSeparator)) = ItemSeparator,
+            encodedString,
+            encodedString & ItemSeparator
+        )
+
+    RETURN NormalizedString
+    ```
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__

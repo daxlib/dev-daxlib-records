@@ -1,0 +1,25 @@
+/// Add a name/value pair to an encoded parameter string
+/// If the parameter name already exists, it will be duplicated (not replaced)
+/// @param {string} encodedString - The encoded parameter string
+/// @param {string} parameterName - The name of the parameter
+/// @param {string} parameterValue - The value of the parameter
+/// @return String with the encoded parameter string
+function 'DaxLib.Records.AddRecordValue' = ```
+    (
+        encodedString : STRING VAL,
+        parameterName : STRING VAL,
+        parameterValue : STRING VAL
+    ) =>
+    VAR AssignmentSeparator = DaxLib.Records.Internals.AssignmentSeparator()
+    VAR ItemSeparator = DaxLib.Records.Internals.ItemSeparator()
+
+    // Create the new parameter pair
+    VAR NewPair = parameterName & AssignmentSeparator & parameterValue & ItemSeparator
+
+    // Append to existing string
+    VAR Result = encodedString & NewPair
+
+    RETURN Result
+    ```
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__

@@ -1,0 +1,7 @@
+/// Separator used to delimit parameter pairs in the encoded string
+/// (internal use only, not intended for external consumption)
+/// @return String value of the separator
+function 'DaxLib.Records.Internals.ItemSeparator' = () => ";~;"
+
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__
