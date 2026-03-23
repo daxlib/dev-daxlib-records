@@ -15,7 +15,7 @@ VAR _Step1 = DaxLib.Records.NewRecordValue ( "ProductCode", "SKU-7890" )
 VAR _Step2 = DaxLib.Records.AddRecordValue ( _Step1, "Quantity", "150" )
 VAR _Step3 = DaxLib.Records.AddRecordValue ( _Step2, "Warehouse", "Seattle" )
 VAR _Step4 = DaxLib.Records.AddRecordValue ( _Step3, "Priority", "High" )
-VAR _Sample_ = DaxLib.Records.AddRecordValue ( _Step4, "SupplierID", "SUP-4521" )
+VAR _Sample = DaxLib.Records.AddRecordValue ( _Step4, "SupplierID", "SUP-4521" )
 ```
 
 To make the code shorter when you create a record, use `NewRecordValueN` functions to create records with 2 to 20 parameters, where N is the number of parameters. Each parameter consists of a name and a value. For example, `NewRecordValue3` allows you to create a record with three parameters:

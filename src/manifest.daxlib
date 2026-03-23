@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/daxlib/daxlib/refs/heads/main/schemas/manifest/1.0.0/manifest.1.0.0.schema.json",
-  "id": "DaxLib.Filtering",
-  "version": "0.1.2",
+  "id": "DaxLib.Records",
+  "version": "0.9.0-beta",
   "authors": "DAXLIB",
-  "description": "A comprehensive set of User-Defined Functions designed to apply and manipulate filter, and to search values.",
-  "tags": "DAX,UDF,FUNCTION,LIB,FILTER",
-  "releaseNotes": "Update metadata with new project and repository URLs",
-  "projectUrl": "https://github.com/daxlib/dev-daxlib-filtering",
-  "repositoryUrl": "https://github.com/daxlib/dev-daxlib-filtering",
+  "description": "A set of User-Defined Functions designed to simulate optional parameters in DAX UDFs.",
+  "tags": "RECORDS,PARAMETERS",
+  "releaseNotes": "First release of DaxLib.Records library.",
+  "projectUrl": "https://github.com/daxlib/dev-daxlib-records",
+  "repositoryUrl": "https://github.com/daxlib/dev-daxlib-records",
   "icon": "/icon.png"
 }
